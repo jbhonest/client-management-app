@@ -21,7 +21,7 @@ This is a simple Django web application for managing clients. The app allows you
 1. **Clone the repository:**
 
     ```sh
-    git clone https://github.com/yourusername/django-client-app.git
+    git clone https://github.com/jbhonest/django-client-app.git
     cd django-client-app
     ```
 
