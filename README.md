@@ -57,5 +57,45 @@ This is a simple Django web application for managing clients. The app allows you
     http://127.0.0.1:8000/clients/
     ```
 
-## Project Structure
+
+## Usage
+
+### Viewing Clients
+
+Navigate to `http://127.0.0.1:8000/clients/` to view the list of clients.
+
+### Adding Clients
+
+Navigate to `http://127.0.0.1:8000/clients/add/` to add a new client. Fill out the form and submit to add the client to the database.
+
+## Code Overview
+
+### Models
+
+The `Client` model represents a client with a first name, last name, and unique email address. It includes a method to get the full name of the client.
+
+### Views
+
+- `client_list` - Displays the list of clients.
+- `add_client` - Displays a form to add a new client.
+
+### Forms
+
+- `ClientForm` - A ModelForm for the `Client` model.
+
+### URLs
+
+- `clients/` - URL for the client list view.
+- `clients/add/` - URL for the add client view.
+
+### Templates
+
+- `client_list.html` - Template for displaying the list of clients.
+- `add_client.html` - Template for the form to add a new client.
+
+
+---
+
+Developed by Jamal Badiee (jbhonest@yahoo.com)
+
 
