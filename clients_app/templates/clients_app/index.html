@@ -1,0 +1,25 @@
+{% extends 'clients_app/base.html' %}
+
+{% block title_block %}
+<title>Home</title>
+{% endblock%}
+
+{% block body_block %}
+<div class="container py-4">
+    <div class="p-5 mb-4 bg-light rounded-3">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 fw-bold">Welcome to Clients App</h1>
+            <ul>
+                <li class="col-md-8 fs-4">Go to <a href="{% url 'clients_app:list' %}">/clients/list</a> to see the
+                    list of
+                    clients.</li>
+                <li class="col-md-8 fs-4">Go to <a href="{% url 'clients_app:create' %}">/clients/create</a> to
+                    create a client.
+                <li class="col-md-8 fs-4">Here is <a href="{% url 'admin:index' %}" target="_blank">Admin Page</a>.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'clients_app/base.html' %}
+
+{% block title_block %}
+<title>Create Client</title>
+{% endblock%}
+
+{% block body_block %}
+
+<h1>Create a new client</h1>
+<form method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit" class="btn btn-primary" value="Create">
+</form>
+
+{% endblock %}
