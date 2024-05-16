@@ -1,3 +1,6 @@
 /db.sqlite3
 /venv_clients
 clients_project/local_settings.py
+clients_project/__pycache__
+clients_app/__pycache__
+
