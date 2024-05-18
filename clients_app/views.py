@@ -4,16 +4,24 @@ from .forms import ClientForm, ProfileForm, UserRegistrationForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.views.generic.list import ListView
+from django.utils.decorators import method_decorator
+
+
+@method_decorator(login_required, name="dispatch")
+class ClientListView(ListView):
+    model = Client
+    ordering = ['-id']
+    context_object_name = 'clients'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["nbar"] = 'list'
+        return context
 
 
 def index(request):
     return render(request, "clients_app/index.html")
-
-
-@login_required
-def clients_list(request):
-    clients = Client.objects.order_by('-id')
-    return render(request, "clients_app/clients_list.html", {"clients": clients, 'nbar': 'list'})
 
 
 @login_required
